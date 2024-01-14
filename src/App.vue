@@ -10,9 +10,12 @@
 import { getList } from '@/api/test/index'
 
 getList().then(res => {
-  console.log(res, 'getList')
+  console.log(res)
 })
 
+// getDetailInfo.then(res => {
+//   console.log(res)
+// })
 // const throttleHandler = () => {
 //   console.log('throttleHandler')
 // }

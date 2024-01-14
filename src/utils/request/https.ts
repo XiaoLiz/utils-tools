@@ -46,10 +46,8 @@ instance.interceptors.response.use(
 const request = <T>(config: AxiosRequestConfig): Promise<T> => {
   return new Promise<T>(resolve => {
     instance.request<ResponseData<T>>(config).then((response: AxiosResponse<ResponseData<T>>) => {
-      console.log(response, '====== data  ========')
-      const data: T = response.data.data
-      console.log(data, '====== data ========')
-      resolve(data)
+      const data = response.data
+      resolve(data as T)
     })
   })
 }
